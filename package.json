@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "browserify main.js --outfile dist/bundle.js && uglifyjs dist/bundle.js -c -m -o dist/bundle.min.js"
+  },
+  "dependencies": {
+    "filereader-stream": "^2.0.0",
+    "streamsaver": "^2.0.3",
+    "web-streams-node": "^0.4.0",
+    "web-streams-polyfill": "^2.0.6"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "uglify-es": "^3.3.9"
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NKN File Transfer</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="padding-top:20px">
+      <div class="input-field">
+        <input id="local-addr" type="text" value="connecting..." disabled>
+        <label for="local-addr">Your Address (use this to receive file)</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <input id="remote-addr" placeholder="Remote NKN address to receive file" type="text">
+        <label for="remote-addr">Send to Address</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input id="file-input" type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input id="file-name" class="file-path validate" type="text" placeholder="Select file to send">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <button id="send" class="btn waves-effect waves-light" style="width:100%">Send</button>
+    </div>
+    <div class="row">
+      <div>Please keep this tab focused in browser while sending/receiving files.</div>
+      <div>It is recommended to receive files in Chrome/Firefox desktop verison.</div>
+    </div>
+    <div class="footer">
+      <div>Using <a target="_blank" href="https://dataride.nkn.org">dataRide</a> powered by NKN</div>
+      <div><a target="_blank" href="https://github.com/nknorg/nftp-js">Source code on GitHub</a></div>
+    </div>
+    <div class="row">
+      <ul id="log-list">
+      </ul>
+    </div>
+  </div>
+  <script src="nkn.min.js"></script>
+  <script src="bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    li {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 5px;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</body>
+</html>
