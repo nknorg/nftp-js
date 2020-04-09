@@ -15,12 +15,12 @@ var client;
 
   client.listen();
 
-  client.on('connect', () => {
+  client.onConnect(() => {
     document.getElementById('local-addr').value = client.addr;
     M.updateTextFields();
   });
 
-  client.on('session', async (session) => {
+  client.onSession(async (session) => {
     console.log(session.localAddr, 'accepted a session from', session.remoteAddr);
 
     let fileNameLen = await readUint32(session);
