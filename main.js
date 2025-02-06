@@ -10,7 +10,7 @@ const sessionConfig = { mtu: 16000 };
 var client;
 
 (function () {
-  client = new nkn.MultiClient({ numSubClients, sessionConfig, tls: true });
+  client = new nkn.MultiClient({ numSubClients, sessionConfig, webrtc: true });
 
   client.listen();
 
